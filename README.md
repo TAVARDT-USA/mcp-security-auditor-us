@@ -43,7 +43,7 @@ python mcp_security_scanner.py --file mcp.json --json
 2. **Arbitrary Command Execution**: Detects raw shell invocations (`bash`, `sh`, `powershell`, `cmd`) and dynamic execution flags (`-c`, `eval`).
 3. **Secret & Credential Exposure**: Flags exposed API keys, private tokens, passwords, and database connection strings in plaintext.
 4. **Supply Chain & Tool Poisoning**: Enforces strict immutable package version pinning for dynamically resolved tools (`npx`, `uvx`).
-5. **SSRF & Cloud Metadata Access**: Identifies arguments targeting loopback interfaces or cloud instance metadata endpoints (`169.254.169.254`).
+5. **SSRF & Private Network Access**: Identifies arguments targeting unauthorized internal network endpoints or loopback interfaces.
 
 ---
 
@@ -80,7 +80,7 @@ jobs:
 ## TAVARDT Ecosystem & Official Portals
 
 - **Main National Portal**: [https://ag.tavardt.com/us/](https://ag.tavardt.com/us/)
-- **Cybersecurity & Web Tools Hub**: [https://tools.tavardt.com/](https://tools.tavardt.com/)
+- **TAVARDT Tools Hub**: [https://tools.tavardt.com/](https://tools.tavardt.com/)
 - **Technical Support Channel**: [https://ag.tavardt.com/us/contact/](https://ag.tavardt.com/us/contact/)
 
 ---
