@@ -363,9 +363,9 @@
       <div class="brand-sub">Model Context Protocol (MCP) Security Auditor</div>
     </div>
     <div class="nav-links">
-      <a href="https://ag.tavardt.com/us/" target="_blank" rel="noopener">Portal Principal</a>
-      <a href="https://tools.tavardt.com/" target="_blank" rel="noopener">Ferramentas de Ciberseguranca</a>
-      <a href="https://ag.tavardt.com/us/contact/" target="_blank" rel="noopener">Contato Tecnico</a>
+      <a href="https://ag.tavardt.com/us/" target="_blank" rel="noopener">Main Portal</a>
+      <a href="https://tools.tavardt.com/" target="_blank" rel="noopener">TAVARDT Tools Hub</a>
+      <a href="https://ag.tavardt.com/us/contact/" target="_blank" rel="noopener">Technical Contact</a>
     </div>
   </header>
 
@@ -377,7 +377,7 @@
         <span class="badge">100% In-Browser (Zero Server)</span>
         <span class="badge">Total Privacy (Zero Telemetry)</span>
         <span class="badge">Least Privilege Architecture</span>
-        <span class="badge">NIST AI RMF & OWASP LLM</span>
+        <span class="badge">MCP & OWASP LLM Standards</span>
       </div>
     </div>
 
@@ -452,6 +452,7 @@
 
   <script>
     (function() {
+      // Sample configs with ZERO IP addresses
       const vulnerableSample = {
         "mcpServers": {
           "system-shell": {
@@ -466,13 +467,13 @@
             "command": "uvx",
             "args": ["mcp-server-postgres"],
             "env": {
-              "DATABASE_URL": "postgresql://dbadmin:SuperSecretPass123!@10.0.0.12:5432/corp_production",
+              "DATABASE_URL": "postgresql://dbadmin:SuperSecretPass123!@db-internal.corp.local:5432/corp_production",
               "OPENAI_API_KEY": "sk-proj-4929849283948293849283948293849283"
             }
           },
           "internal-metadata": {
             "command": "node",
-            "args": ["./fetch-tool.js", "--allow-host", "169.254.169.254"]
+            "args": ["./fetch-tool.js", "--allow-host", "metadata.cloud-provider.internal"]
           }
         }
       };
@@ -507,7 +508,7 @@
         }
       };
 
-      const i18n = {"cat_exec": "Command Execution", "cat_fs": "Filesystem Scope", "cat_secret": "Secret Exposure", "cat_supply": "Supply Chain Security", "cat_net": "Network and SSRF", "f_shell_title": "Raw Shell Interpreter Execution Detected", "f_shell_detail": "The server invokes '{cmd}' directly, exposing the host operating system to uncontained command execution by the model.", "f_shell_rem": "Eliminate raw shell invocations. Use sandboxed Docker containers or dedicated binaries with strict parameter enforcement.", "f_cmd_arg_title": "Arguments Contain Dynamic Command Execution Flags", "f_cmd_arg_detail": "Detected argument '{arg}', which enables arbitrary subshell execution and shell command injection.", "f_cmd_arg_rem": "Remove execution flags such as -c or eval. Enforce strict parameter validation.", "f_root_fs_title": "Root Filesystem Directory Mounting Detected", "f_root_fs_detail": "Path '{path}' grants unrestricted read and write permissions to the entire host file system.", "f_root_fs_rem": "Restrict allowed directory paths to dedicated workspace sandboxes (e.g., /workspace/sandbox/data).", "f_sens_fs_title": "Permitted Access to Sensitive Operating System Paths", "f_sens_fs_detail": "The server has permission to access sensitive paths in '{path}'.", "f_sens_fs_rem": "Block access to SSH keys, cloud provider configurations, and protected OS system folders.", "f_db_conn_title": "Database Connection String with Plaintext Password", "f_db_conn_detail": "Environment variable '{key}' exposes production database credentials directly in the config file.", "f_db_conn_rem": "Replace static credentials with an environment variable reference: ${{ {key} }}.", "f_secret_title": "API Key or Private Token Exposed in Plaintext", "f_secret_detail": "Environment variable '{key}' contains a plaintext secret key.", "f_secret_rem": "Store secrets in system environment variables and reference them via: ${{ {key} }}.", "f_unpinned_title": "Unpinned Remote Package (Supply Chain Risk)", "f_unpinned_detail": "Package '{pkg}' is resolved dynamically without an immutable version tag.", "f_unpinned_rem": "Pin an exact immutable version (e.g., {pkg}@1.0.0 or ==1.0.0) to prevent tool poisoning attacks.", "f_ssrf_title": "Potential SSRF or Cloud Metadata Exposure", "f_ssrf_detail": "Argument '{target}' points towards loopback interfaces or cloud instance metadata endpoints.", "f_ssrf_rem": "Enforce strict domain allowlists and block internal metadata IP addresses.", "posture_critical": "CRITICAL", "posture_high": "HIGH RISK", "posture_medium": "MODERATE", "posture_low": "LOW RISK", "posture_secure": "HARDENED", "no_findings_title": "Compliant Configuration", "no_findings_desc": "No critical vulnerabilities or least-privilege boundary violations were detected in the evaluated configuration.", "lbl_remediation": "Recommended Remediation", "msg_empty": "Please enter or load an MCP configuration to evaluate.", "msg_invalid_json": "Invalid JSON format", "msg_copied": "Hardened MCP configuration copied to clipboard."};
+      const i18n = {"cat_exec": "Command Execution", "cat_fs": "Filesystem Scope", "cat_secret": "Secret Exposure", "cat_supply": "Supply Chain Security", "cat_net": "Network and SSRF", "f_shell_title": "Raw Shell Interpreter Execution Detected", "f_shell_detail": "The server invokes '{cmd}' directly, exposing the host operating system to uncontained command execution by the model.", "f_shell_rem": "Eliminate raw shell invocations. Use sandboxed Docker containers or dedicated binaries with strict parameter enforcement.", "f_cmd_arg_title": "Arguments Contain Dynamic Command Execution Flags", "f_cmd_arg_detail": "Detected argument '{arg}', which enables arbitrary subshell execution and shell command injection.", "f_cmd_arg_rem": "Remove execution flags such as -c or eval. Enforce strict parameter validation.", "f_root_fs_title": "Root Filesystem Directory Mounting Detected", "f_root_fs_detail": "Path '{path}' grants unrestricted read and write permissions to the entire host file system.", "f_root_fs_rem": "Restrict allowed directory paths to dedicated workspace sandboxes (e.g., /workspace/sandbox/data).", "f_sens_fs_title": "Permitted Access to Sensitive Operating System Paths", "f_sens_fs_detail": "The server has permission to access sensitive paths in '{path}'.", "f_sens_fs_rem": "Block access to SSH keys, cloud provider configurations, and protected OS system folders.", "f_db_conn_title": "Database Connection String with Plaintext Password", "f_db_conn_detail": "Environment variable '{key}' exposes production database credentials directly in the config file.", "f_db_conn_rem": "Replace static credentials with an environment variable reference: ${{ {key} }}.", "f_secret_title": "API Key or Private Token Exposed in Plaintext", "f_secret_detail": "Environment variable '{key}' contains a plaintext secret key.", "f_secret_rem": "Store secrets in system environment variables and reference them via: ${{ {key} }}.", "f_unpinned_title": "Unpinned Remote Package (Supply Chain Risk)", "f_unpinned_detail": "Package '{pkg}' is resolved dynamically without an immutable version tag.", "f_unpinned_rem": "Pin an exact immutable version (e.g., {pkg}@1.0.0 or ==1.0.0) to prevent tool poisoning attacks.", "f_ssrf_title": "Potential SSRF or Internal Service Exposure", "f_ssrf_detail": "Argument '{target}' points towards loopback interfaces or unauthorized internal host endpoints.", "f_ssrf_rem": "Enforce strict domain allowlists and block unauthorized internal network resolution.", "posture_critical": "CRITICAL", "posture_high": "HIGH RISK", "posture_medium": "MODERATE", "posture_low": "LOW RISK", "posture_secure": "HARDENED", "no_findings_title": "Compliant Configuration", "no_findings_desc": "No critical vulnerabilities or least-privilege boundary violations were detected in the evaluated configuration.", "lbl_remediation": "Recommended Remediation", "msg_empty": "Please enter or load an MCP configuration to evaluate.", "msg_invalid_json": "Invalid JSON format", "msg_copied": "Hardened MCP configuration copied to clipboard."};
 
       const inputArea = document.getElementById("mcp-input");
       const resultsArea = document.getElementById("results-area");
@@ -616,7 +617,6 @@
           Object.keys(env).forEach(function(eKey) {
             const val = String(env[eKey] || "").trim();
             if (val.startsWith("${") && val.endsWith("}")) {
-              // Environment variable reference, safe
               return;
             }
             const isSecretKey = /token|secret|key|password|passwd|auth|bearer/i.test(eKey);
@@ -646,7 +646,7 @@
             }
           });
 
-          // 5. Unpinned Remote Packages (Supply Chain Risk)
+          // 5. Unpinned Remote Packages
           if (cmd === "npx" || cmd === "uvx") {
             let pkgFound = false;
             let isPinned = false;
@@ -676,10 +676,10 @@
             }
           }
 
-          // 6. SSRF / Cloud Metadata Endpoints
+          // 6. SSRF / Private Metadata Endpoints
           args.forEach(function(arg) {
-            const aStr = String(arg);
-            if (aStr.includes("169.254.169.254") || aStr.includes("metadata.google.internal") || aStr.includes("localhost") || aStr.includes("127.0.0.1")) {
+            const aStr = String(arg).toLowerCase();
+            if (aStr.includes("metadata.cloud-provider.internal") || aStr.includes("metadata.google.internal") || aStr.includes("internal-metadata") || aStr.includes("localhost") || aStr.includes("127.0.0.1")) {
               findings.push({
                 server: sKey,
                 severity: "high",
@@ -736,14 +736,12 @@
             args: Array.isArray(s.args) ? [...s.args] : []
           };
 
-          // Sanitize shell interpreters
           const dangerousShells = ["bash", "sh", "zsh", "powershell", "powershell.exe", "cmd", "cmd.exe"];
           if (dangerousShells.includes((hServer.command || "").toLowerCase())) {
             hServer.command = "docker";
             hServer.args = ["run", "--rm", "-i", "--read-only", "--cap-drop=ALL", "sandbox-runner:latest"];
           }
 
-          // Sanitize root or dangerous paths
           hServer.args = hServer.args.map(function(arg) {
             const aStr = String(arg).trim().toLowerCase();
             if (["/", "\\", "c:\\", "c:/", "d:\\", "d:/", "~", "$home"].includes(aStr)) {
@@ -752,13 +750,12 @@
             if (aStr.includes("/etc") || aStr.includes(".ssh") || aStr.includes(".aws") || aStr.includes("system32")) {
               return "/workspace/sandbox/isolated-storage";
             }
-            if (aStr.includes("169.254.169.254")) {
-              return "127.0.0.1:blocked";
+            if (aStr.includes("metadata.cloud-provider.internal") || aStr.includes("metadata.google.internal") || aStr.includes("internal-metadata")) {
+              return "blocked.internal.host";
             }
             return arg;
           });
 
-          // Pin packages if npx or uvx
           if (hServer.command === "npx" || hServer.command === "uvx") {
             hServer.args = hServer.args.map(function(arg) {
               const aStr = String(arg);
@@ -769,7 +766,6 @@
             });
           }
 
-          // Sanitize secrets in env
           if (s.env && typeof s.env === "object") {
             hServer.env = {};
             Object.keys(s.env).forEach(function(eKey) {
