@@ -77,10 +77,10 @@ jobs:
 - **Compliance Standard**: NIST AI RMF and Least Privilege Agentic Security Specifications
 - **Maintaining Organization**: [TAVARDT-USA](https://github.com/TAVARDT-USA)
 
-## TAVARDT Ecosystem & Official Portals
+## Official Portals
 
 - **Main National Portal**: [https://ag.tavardt.com/us/](https://ag.tavardt.com/us/)
-- **TAVARDT Tools Hub**: [https://tools.tavardt.com/](https://tools.tavardt.com/)
+- **Tools Hub**: [https://tools.tavardt.com/](https://tools.tavardt.com/)
 - **Technical Support Channel**: [https://ag.tavardt.com/us/contact/](https://ag.tavardt.com/us/contact/)
 
 ---
