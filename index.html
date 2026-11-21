@@ -8,6 +8,18 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="canonical" href="https://tavardt-usa.github.io/mcp-security-auditor-us/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tavardt-brasil.github.io/mcp-security-auditor-br/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tavardt-portugal.github.io/mcp-security-auditor-pt/">
+  <link rel="alternate" hreflang="en-US" href="https://tavardt-usa.github.io/mcp-security-auditor-us/">
+  <link rel="alternate" hreflang="en-GB" href="https://tavardt-uk.github.io/mcp-security-auditor-uk/">
+  <link rel="alternate" hreflang="en-CA" href="https://tavardt-canada.github.io/mcp-security-auditor-ca/">
+  <link rel="alternate" hreflang="en-AU" href="https://tavardt-australia.github.io/mcp-security-auditor-au/">
+  <link rel="alternate" hreflang="en-NZ" href="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/">
+  <link rel="alternate" hreflang="es-ES" href="https://tavardt-espana.github.io/mcp-security-auditor-es/">
+  <link rel="alternate" hreflang="es-MX" href="https://tavardt-mexico.github.io/mcp-security-auditor-mx/">
+  <link rel="alternate" hreflang="fr-FR" href="https://tavardt-france.github.io/mcp-security-auditor-fr/">
+  <link rel="alternate" hreflang="it-IT" href="https://tavardt-italia.github.io/mcp-security-auditor-it/">
+  <link rel="alternate" hreflang="x-default" href="https://tavardt-usa.github.io/mcp-security-auditor-us/">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TAVARDT">
@@ -72,6 +84,52 @@
           "position": 3,
           "name": "MCP Security Auditor",
           "item": "https://tavardt-usa.github.io/mcp-security-auditor-us/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tavardt-usa.github.io/mcp-security-auditor-us/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Model Context Protocol (MCP) and what are its risks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MCP is the open standard connecting AI models to local filesystems, tools, and databases. Key risks include overprivileged permissions and unconstrained command execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can an MCP server be compromised via indirect prompt injection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Untrusted data returned by a tool (e.g. web scraping) may contain hidden instructions commanding the LLM to call filesystem tools to exfiltrate files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the MCP Security Auditor execute invasive tests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It performs passive static analysis of your configuration manifests (mcp.json) without executing commands or mutating your environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you enforce least privilege on MCP servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By mounting strictly isolated directories in read-only mode, disabling generic shell tools, and requiring user confirmation on sensitive actions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sandboxing patterns does TAVARDT recommend for MCP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend containerized MCP daemons with ephemeral credentials, restricted outbound network routes, and dedicated process namespaces."
+          }
         }
       ]
     }
@@ -735,6 +793,151 @@ textarea:focus, input[type="text"]:focus {
   color: #64748b !important;
 }
 
+
+/* ==========================================================================
+   TAVARDT UNIFIED 1200PX CONTAINER ALIGNMENT & AEO/GEO/FAQ DESIGN TOKENS
+   ========================================================================== */
+.container, .main-wrap, main, .tavardt-hero, .hero {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  box-sizing: border-box !important;
+}
+.card, .main-card, .panel, .stage-card, .results-section, .workspace-grid {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.aeo-card {
+  width: 100% !important;
+  background: #0e1526 !important;
+  border: 1px solid rgba(30, 0, 255, 0.3) !important;
+  border-left: 4px solid #1e00ff !important;
+  border-radius: 16px !important;
+  padding: 28px 32px !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.aeo-card h2 {
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+}
+.aeo-card p {
+  font-size: 0.98rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.7 !important;
+}
+.vectors-section {
+  width: 100% !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.vectors-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.vectors-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+}
+.vector-card {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+.vector-title {
+  font-size: 0.96rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+}
+.vector-desc {
+  font-size: 0.88rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.5 !important;
+}
+.faq-section {
+  width: 100% !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.faq-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.faq-item {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  margin-bottom: 14px !important;
+  padding: 18px 24px !important;
+  transition: border-color 0.2s !important;
+  box-sizing: border-box !important;
+}
+.faq-item[open] {
+  border-color: rgba(30, 0, 255, 0.4) !important;
+}
+.faq-question {
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 0.96rem !important;
+  color: #ffffff !important;
+  outline: none !important;
+}
+.faq-answer {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.6 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding-top: 12px !important;
+}
+.cta-card {
+  width: 100% !important;
+  background: linear-gradient(135deg, rgba(30, 0, 255, 0.2) 0%, rgba(11, 16, 30, 0.9) 100%) !important;
+  border: 1px solid rgba(30, 0, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 36px 32px !important;
+  text-align: center !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.cta-card h3 { font-size: 1.35rem !important; font-weight: 800 !important; margin-bottom: 10px !important; color: #ffffff !important; }
+.cta-card p { color: #94a3b8 !important; max-width: 720px !important; margin: 0 auto 24px !important; font-size: 0.98rem !important; }
+.cta-btns { display: flex !important; gap: 16px !important; justify-content: center !important; flex-wrap: wrap !important; }
+.btn-wa {
+  background: #1e00ff !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  padding: 14px 32px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 25px rgba(30, 0, 255, 0.6) !important;
+  transition: all 0.2s !important;
+  display: inline-block !important;
+}
+.btn-wa:hover { transform: translateY(-2px) !important; box-shadow: 0 0 35px rgba(30, 0, 255, 0.9) !important; }
+.btn-corp {
+  background: #0b101e !important;
+  color: #f8fafc !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: inline-block !important;
+}
 </style>
 </head>
 <body>
@@ -821,7 +1024,74 @@ textarea:focus, input[type="text"]:focus {
     </div>
   </div>
 
-  <footer class="tavardt-footer">
+  <div class="container">
+
+  <!-- AEO CITABLE DEFINITION SECTION (100% WIDTH - 1200px) -->
+  <section class="aeo-card">
+    <h2>What is the MCP Security Auditor?</h2>
+    <p>The TAVARDT MCP Security Auditor is a specialized diagnostic security tool engineered for the Model Context Protocol (MCP) ecosystem. The auditor analyzes tool definitions, identifies unrestricted filesystem access boundaries, inspects local shell execution privileges, and generates hardened configuration manifests (.json) for enterprise AI runtimes.</p>
+  </section>
+
+  <!-- GEO TECHNICAL VECTORS SECTION (100% WIDTH - 1200px) -->
+  <section class="vectors-section">
+    <h2>Audited Risk Vectors & Defensive Boundaries</h2>
+    <div class="vectors-grid">
+      <div class="vector-card">
+        <h3 class="vector-title">Unrestricted Filesystem Access</h3>
+        <p class="vector-desc">MCP servers mounted to home directories or root paths permitting arbitrary read/write access to sensitive files.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Arbitrary Shell Command Execution</h3>
+        <p class="vector-desc">Tools executing terminal commands without argument sanitization creating critical Remote Code Execution vulnerabilities.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Environment Secrets Leakage</h3>
+        <p class="vector-desc">Inadvertent leakage of API credentials, database strings, and auth tokens embedded in plaintext mcp.json env blocks.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Tool-Driven Indirect Prompt Injection</h3>
+        <p class="vector-desc">Malicious external tool outputs injecting instructions that manipulate the parent model into unauthorized operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO/GEO FAQ SECTION (100% WIDTH - EXACTLY 5 FAQS) -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions (FAQ) & Technical Guidelines</h2>
+      <details class="faq-item">
+        <summary class="faq-question">What is the Model Context Protocol (MCP) and what are its risks?</summary>
+        <div class="faq-answer">MCP is the open standard connecting AI models to local filesystems, tools, and databases. Key risks include overprivileged permissions and unconstrained command execution.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">How can an MCP server be compromised via indirect prompt injection?</summary>
+        <div class="faq-answer">Untrusted data returned by a tool (e.g. web scraping) may contain hidden instructions commanding the LLM to call filesystem tools to exfiltrate files.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Does the MCP Security Auditor execute invasive tests?</summary>
+        <div class="faq-answer">No. It performs passive static analysis of your configuration manifests (mcp.json) without executing commands or mutating your environment.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">How do you enforce least privilege on MCP servers?</summary>
+        <div class="faq-answer">By mounting strictly isolated directories in read-only mode, disabling generic shell tools, and requiring user confirmation on sensitive actions.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">What sandboxing patterns does TAVARDT recommend for MCP?</summary>
+        <div class="faq-answer">We recommend containerized MCP daemons with ephemeral credentials, restricted outbound network routes, and dedicated process namespaces.</div>
+      </details>
+  </section>
+
+  <!-- DEFENSIVE HARDENING CTA -->
+  <div class="cta-card">
+    <h3>Require Enterprise Hardening for MCP Deployments?</h3>
+    <p>TAVARDT cyber engineering audits MCP architectures, designs containerized sandboxes, and enforces zero-trust permission models.</p>
+    <div class="cta-btns">
+      <a class="btn-wa" href="https://wa.me/5584987721775?text=Hello%20Sofia%2C%20I%20ran%20the%20MCP%20Security%20Auditor%20and%20found%20permission%20issues%20in%20my%20configuration.%20I%20need%20technical%20assistance%20to%20harden%20my%20setup." target="_blank">Direct Contact with Sofia (WhatsApp)</a>
+      <a class="btn-corp" href="https://ag.tavardt.com/cybersecurity/" target="_blank" rel="noopener">Explore Cybersecurity Practice</a>
+    </div>
+  </div>
+
+</div>
+<footer class="tavardt-footer">
   <div class="tavardt-footer-inner">
     <div class="tavardt-footer-col">
       <div class="tavardt-footer-logo">TAVARDT<span class="tavardt-brand-dot">.</span></div>
