@@ -78,305 +78,6 @@
   ]
 }
   </script>
-  <style>
-
-/* ==========================================================================
-   TAVARDT UNIFIED ENTERPRISE DESIGN SYSTEM (ASTRYX TOKENS)
-   ========================================================================== */
-:root {
-  --bg: #050510 !important;
-  --bg2: #0b101e !important;
-  --bg3: #111827 !important;
-  --card-bg: #0b101e !important;
-  --surface: #0b101e !important;
-  --surface-card: #0e1526 !important;
-  --surface-elevated: #131d33 !important;
-  --card-border: rgba(255, 255, 255, 0.08) !important;
-  --border: rgba(255, 255, 255, 0.08) !important;
-  --accent: #1e00ff !important;
-  --accent-hover: #1500db !important;
-  --blue: #1e00ff !important;
-  --info: #1e00ff !important;
-  --text: #f8fafc !important;
-  --text-muted: #94a3b8 !important;
-  --text2: #94a3b8 !important;
-  --code-bg: #030712 !important;
-}
-
-html, body {
-  background-color: #050510 !important;
-  color: #f8fafc !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-height: 100vh !important;
-  -webkit-font-smoothing: antialiased !important;
-}
-
-/* Header */
-.tavardt-header {
-  width: 100% !important;
-  background: rgba(5, 5, 16, 0.95) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000 !important;
-}
-.tavardt-header-inner {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 16px 24px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  box-sizing: border-box !important;
-}
-.tavardt-brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  text-decoration: none !important;
-  color: #ffffff !important;
-}
-.tavardt-logo-text {
-  font-size: 1.35rem !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.03em !important;
-  color: #ffffff !important;
-}
-.tavardt-brand-dot {
-  color: #1e00ff !important;
-}
-.tavardt-badge-jurisdiction {
-  font-size: 0.75rem !important;
-  font-weight: 600 !important;
-  color: #94a3b8 !important;
-  padding: 3px 12px !important;
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 9999px !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-}
-.tavardt-nav {
-  display: flex !important;
-  align-items: center !important;
-  gap: 24px !important;
-}
-.tavardt-nav-link {
-  color: #94a3b8 !important;
-  text-decoration: none !important;
-  font-size: 0.88rem !important;
-  font-weight: 500 !important;
-  transition: color 0.2s ease !important;
-}
-.tavardt-nav-link:hover {
-  color: #ffffff !important;
-}
-
-/* Hero Section */
-.tavardt-hero, .hero {
-  max-width: 1000px !important;
-  margin: 0 auto !important;
-  padding: 48px 24px 28px !important;
-  text-align: center !important;
-  box-sizing: border-box !important;
-  background: transparent !important;
-  border: none !important;
-}
-.tavardt-hero h1, .hero h1, h1 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.03em !important;
-  margin: 0 0 12px 0 !important;
-  color: #ffffff !important;
-  line-height: 1.2 !important;
-}
-.tavardt-hero p, .hero p {
-  font-size: 1.05rem !important;
-  color: #94a3b8 !important;
-  max-width: 720px !important;
-  margin: 0 auto !important;
-  line-height: 1.6 !important;
-}
-
-/* Strict Suppression of Junior Elements */
-.badge-bar, .badges, .hero-badge, .hero img, .hero-img, .cta-grid, .cta-btn.wa, [class*="wa"],  {
-  display: none !important;
-}
-
-/* Containers and Cards */
-.card, .main-card, .panel, .stage-card, .vector-card {
-  background: #0b101e !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 16px !important;
-}
-.container, main, .main-wrap {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Textareas & Inputs */
-textarea, input[type="text"] {
-  background: #050510 !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-radius: 10px !important;
-  color: #f8fafc !important;
-  font-family: 'Fira Code', Consolas, Monaco, monospace !important;
-}
-textarea:focus, input[type="text"]:focus {
-  border-color: #1e00ff !important;
-  outline: none !important;
-  box-shadow: 0 0 15px rgba(30, 0, 255, 0.3) !important;
-}
-
-/* Button Centering Containers */
-.btn-row, .presets-row, .sample-buttons {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 12px !important;
-  margin: 18px 0 !important;
-  flex-wrap: wrap !important;
-}
-
-/* PRIMARY BUTTONS: 100% TAVARDT Electric Blue (#1e00ff) */
-.btn-primary, button.btn-primary, .btn-action-main, #btn-generate-blueprint, #btn-audit, .btn-run, #run-audit-btn, .btn-execute, .btn-analyze {
-  background: #1e00ff !important;
-  color: #ffffff !important;
-  border: none !important;
-  border-radius: 9999px !important;
-  font-size: 0.92rem !important;
-  font-weight: 600 !important;
-  padding: 13px 36px !important;
-  box-shadow: 0 0 30px rgba(30, 0, 255, 0.7) !important;
-  cursor: pointer !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-.btn-primary:hover, button.btn-primary:hover, .btn-action-main:hover, #btn-generate-blueprint:hover, #btn-audit:hover, .btn-run:hover, #run-audit-btn:hover, .btn-execute:hover, .btn-analyze:hover {
-  background: #1500db !important;
-  box-shadow: 0 0 45px rgba(30, 0, 255, 0.95) !important;
-  transform: translateY(-1px) !important;
-}
-
-/* SECONDARY BUTTONS: Clean dark pill */
-.btn-secondary, button.btn-secondary, .btn-sample, .btn-preset, button.btn-preset, .btn-action-secondary, .code-tab, .tab-btn {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  color: #cbd5e1 !important;
-  border-radius: 9999px !important;
-  font-size: 0.88rem !important;
-  font-weight: 500 !important;
-  padding: 10px 22px !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
-}
-.btn-secondary:hover, button.btn-secondary:hover, .btn-sample:hover, .btn-preset:hover, button.btn-preset:hover, .btn-action-secondary:hover {
-  border-color: #1e00ff !important;
-  color: #ffffff !important;
-  background: rgba(30, 0, 255, 0.08) !important;
-}
-
-/* Active State for Tabs & Selectors */
-.code-tab.active, .tab-btn.active, .tab.active, .arch-btn.active, .btn-preset.active-hard {
-  border-color: #1e00ff !important;
-  color: #ffffff !important;
-  background: rgba(30, 0, 255, 0.12) !important;
-}
-
-/* Institutional Footer */
-.tavardt-footer {
-  width: 100% !important;
-  background: #050510 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-  margin-top: 56px !important;
-  color: #94a3b8 !important;
-}
-.tavardt-footer-inner {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 48px 24px 32px !important;
-  display: grid !important;
-  grid-template-columns: 2fr 1fr 1.5fr !important;
-  gap: 40px !important;
-}
-@media (max-width: 768px) {
-  .tavardt-footer-inner {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-}
-.tavardt-footer-logo {
-  font-size: 1.4rem !important;
-  font-weight: 800 !important;
-  color: #ffffff !important;
-  margin-bottom: 12px !important;
-  letter-spacing: -0.03em !important;
-}
-.tavardt-footer-mission {
-  font-size: 0.88rem !important;
-  line-height: 1.6 !important;
-  color: #94a3b8 !important;
-  margin-bottom: 16px !important;
-  max-width: 440px !important;
-}
-.tavardt-footer-jurisdiction-tag {
-  display: inline-block !important;
-  font-size: 0.78rem !important;
-  color: #c7d2fe !important;
-  background: rgba(30, 0, 255, 0.12) !important;
-  border: 1px solid rgba(30, 0, 255, 0.3) !important;
-  padding: 4px 12px !important;
-  border-radius: 9999px !important;
-}
-.tavardt-footer-heading {
-  font-size: 0.82rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.08em !important;
-  color: #ffffff !important;
-  margin-bottom: 16px !important;
-}
-.tavardt-footer-links {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important;
-}
-.tavardt-footer-links a {
-  color: #94a3b8 !important;
-  text-decoration: none !important;
-  font-size: 0.88rem !important;
-  transition: color 0.2s ease !important;
-}
-.tavardt-footer-links a:hover {
-  color: #1e00ff !important;
-}
-.tavardt-footer-compliance-text {
-  font-size: 0.85rem !important;
-  line-height: 1.6 !important;
-  color: #94a3b8 !important;
-}
-.tavardt-footer-bottom {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 20px 24px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  text-align: center !important;
-  font-size: 0.82rem !important;
-  color: #64748b !important;
-}
-
-  </style>
 
   
   
@@ -725,6 +426,316 @@ textarea:focus, input[type="text"]:focus {
     }
     footer a:hover { text-decoration: underline; }
   </style>
+
+<style id="tavardt-unified-enterprise-css">
+
+/* ==========================================================================
+   TAVARDT UNIFIED ENTERPRISE DESIGN SYSTEM (ASTRYX / AG-ONE TOKENS)
+   ========================================================================== */
+:root {
+  --bg: #050510 !important;
+  --bg2: #0b101e !important;
+  --bg3: #111827 !important;
+  --card-bg: #0b101e !important;
+  --surface: #0b101e !important;
+  --surface-card: #0e1526 !important;
+  --surface-elevated: #131d33 !important;
+  --card-border: rgba(255, 255, 255, 0.08) !important;
+  --border: rgba(255, 255, 255, 0.08) !important;
+  --accent: #1e00ff !important;
+  --accent-hover: #1500db !important;
+  --blue: #1e00ff !important;
+  --info: #1e00ff !important;
+  --text: #f8fafc !important;
+  --text-muted: #94a3b8 !important;
+  --text2: #94a3b8 !important;
+  --code-bg: #030712 !important;
+}
+
+html, body {
+  background-color: #050510 !important;
+  color: #f8fafc !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Header: Strict Full-Width Sticky Glassmorphism */
+header.tavardt-header, header {
+  width: 100% !important;
+  display: block !important;
+  background: rgba(5, 5, 16, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+.tavardt-header-inner {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 16px 32px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+.tavardt-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+}
+.tavardt-logo-text {
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  color: #ffffff !important;
+}
+.tavardt-brand-dot {
+  color: #1e00ff !important;
+}
+.tavardt-badge-jurisdiction {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: #94a3b8 !important;
+  padding: 3px 12px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 9999px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+.tavardt-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  margin: 0 !important;
+}
+.tavardt-nav-link {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+.tavardt-nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.tavardt-hero, .hero {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 48px 24px 28px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+}
+.tavardt-hero h1, .hero h1, h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 0 12px 0 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+}
+.tavardt-hero p, .hero p {
+  font-size: 1.05rem !important;
+  color: #94a3b8 !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+}
+
+/* Strict Suppression of Junior Elements & Redundancies */
+.badge-bar, .badges, .hero-badge, .hero img, .hero-img, .cta-grid, .cta-btn.wa, [class*="wa"] {
+  display: none !important;
+}
+
+/* Containers and Cards */
+.card, .main-card, .panel, .stage-card, .vector-card {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+}
+.container, main, .main-wrap {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Textareas & Inputs */
+textarea, input[type="text"] {
+  background: #050510 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 10px !important;
+  color: #f8fafc !important;
+  font-family: 'Fira Code', Consolas, Monaco, monospace !important;
+}
+textarea:focus, input[type="text"]:focus {
+  border-color: #1e00ff !important;
+  outline: none !important;
+  box-shadow: 0 0 15px rgba(30, 0, 255, 0.3) !important;
+}
+
+/* Button Centering Containers */
+.btn-row, .presets-row, .sample-buttons, .arch-selector, .preset-bar, .code-actions, .actions-row, .code-tabs, .tabs-nav, .tabs {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 20px auto !important;
+  flex-wrap: wrap !important;
+  text-align: center !important;
+}
+
+/* PRIMARY BUTTONS: 100% TAVARDT Electric Blue (#1e00ff) */
+.btn-primary, button.btn-primary, .btn-action-main, #btn-generate-blueprint, #btn-audit, .btn-run, #run-audit-btn, .btn-execute, .btn-analyze {
+  background: #1e00ff !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  padding: 13px 36px !important;
+  box-shadow: 0 0 30px rgba(30, 0, 255, 0.7) !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.btn-primary:hover, button.btn-primary:hover, .btn-action-main:hover, #btn-generate-blueprint:hover, #btn-audit:hover, .btn-run:hover, #run-audit-btn:hover, .btn-execute:hover, .btn-analyze:hover {
+  background: #1500db !important;
+  box-shadow: 0 0 45px rgba(30, 0, 255, 0.95) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* SECONDARY BUTTONS: Clean dark pill */
+.btn-secondary, button.btn-secondary, .btn-sample, .btn-preset, button.btn-preset, .btn-action-secondary, .code-tab, .tab-btn {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+  border-radius: 9999px !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  padding: 10px 22px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+.btn-secondary:hover, button.btn-secondary:hover, .btn-sample:hover, .btn-preset:hover, button.btn-preset:hover, .btn-action-secondary:hover {
+  border-color: #1e00ff !important;
+  color: #ffffff !important;
+  background: rgba(30, 0, 255, 0.08) !important;
+}
+
+/* Active State for Tabs & Selectors */
+.code-tab.active, .tab-btn.active, .tab.active, .arch-btn.active, .btn-preset.active-hard {
+  border-color: #1e00ff !important;
+  color: #ffffff !important;
+  background: rgba(30, 0, 255, 0.12) !important;
+}
+
+/* Institutional Footer */
+.tavardt-footer {
+  width: 100% !important;
+  background: #050510 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-top: 56px !important;
+  color: #94a3b8 !important;
+}
+.tavardt-footer-inner {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 48px 24px 32px !important;
+  display: grid !important;
+  grid-template-columns: 2fr 1fr 1.5fr !important;
+  gap: 40px !important;
+}
+@media (max-width: 768px) {
+  .tavardt-footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+.tavardt-footer-logo {
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  letter-spacing: -0.03em !important;
+}
+.tavardt-footer-mission {
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  color: #94a3b8 !important;
+  margin-bottom: 16px !important;
+  max-width: 440px !important;
+}
+.tavardt-footer-jurisdiction-tag {
+  display: inline-block !important;
+  font-size: 0.78rem !important;
+  color: #c7d2fe !important;
+  background: rgba(30, 0, 255, 0.12) !important;
+  border: 1px solid rgba(30, 0, 255, 0.3) !important;
+  padding: 4px 12px !important;
+  border-radius: 9999px !important;
+}
+.tavardt-footer-heading {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #ffffff !important;
+  margin-bottom: 16px !important;
+}
+.tavardt-footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+.tavardt-footer-links a {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-size: 0.88rem !important;
+  transition: color 0.2s ease !important;
+}
+.tavardt-footer-links a:hover {
+  color: #1e00ff !important;
+}
+.tavardt-footer-compliance-text {
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+  color: #94a3b8 !important;
+}
+.tavardt-footer-bottom {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 20px 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  text-align: center !important;
+  font-size: 0.82rem !important;
+  color: #64748b !important;
+}
+
+</style>
 </head>
 <body>
 
@@ -746,7 +757,6 @@ textarea:focus, input[type="text"]:focus {
     <div class="hero">
       <h1>Model Context Protocol (MCP) Security Auditor</h1>
       <p>Static security analysis for Model Context Protocol (MCP) configurations. Inspect filesystem permission scopes, eliminate arbitrary shell execution risks, and safeguard AI agent secrets.</p>
-      
     </div>
 
     <div class="card">
@@ -761,7 +771,7 @@ textarea:focus, input[type="text"]:focus {
 
       <textarea id="mcp-input" placeholder='Paste your mcp.json configuration JSON here...'></textarea>
 
-      <div>
+      <div class="btn-row">
         <button class="btn-primary" id="btn-audit">Audit MCP Security</button>
         <button class="btn-secondary" id="btn-harden">Generate Hardened Config</button>
       </div>
