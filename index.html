@@ -522,13 +522,15 @@
     width: 100%;
     box-sizing: border-box;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent, #1e00ff);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1236,13 +1238,15 @@ footer a:hover,
     width: 100%;
     box-sizing: border-box;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent, #1e00ff);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1445,13 +1449,15 @@ footer > div:first-child {
     width: 100%;
     box-sizing: border-box;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent, #1e00ff);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1708,7 +1714,7 @@ footer > div:first-child {
 
 
     <section class="aeo-section">
-      <div class="aeo-badge">DEFENSIVE SECURITY STANDARD FOR MCP PROTOCOL</div>
+      <div class="aeo-badge" id="aeo-badge">DEFENSIVE SECURITY STANDARD FOR MCP PROTOCOL</div>
       <h2 class="aeo-title">What is Privilege Escalation and Tool Poisoning in the Model Context Protocol (MCP)?</h2>
       <div class="aeo-content">
         <p>The Model Context Protocol (MCP) bridges foundation models with local operating system tools, enterprise databases, and external APIs. The risk of privilege escalation and tool poisoning occurs when AI agents are exposed to overly permissive tool schemas or when untrusted prompt inputs manipulate tool call arguments executed on local or remote MCP servers.</p>
