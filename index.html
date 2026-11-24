@@ -14,19 +14,8 @@
 <title>Model Context Protocol (MCP) Security Auditor | TAVARDT United States</title>
 <meta content="Security auditor and permission validator for Model Context Protocol (MCP) servers and tools. Client-side web app and Python CLI." name="description"/>
 <link href="./favicon.ico" rel="icon" type="image/x-icon"/>
-
 <link href="https://tavardt-usa.github.io/mcp-security-auditor-us/" rel="canonical"/>
-
-
 <link href="https://tavardt-usa.github.io/mcp-security-auditor-us/" hreflang="en-US" rel="alternate"/>
-
-
-
-
-
-
-
-
 <link href="https://tavardt-usa.github.io/mcp-security-auditor-us/" hreflang="x-default" rel="alternate"/>
 <meta content="index, follow" name="robots"/>
 <meta content="website" property="og:type"/>
@@ -1597,7 +1586,7 @@ footer > div:first-child {
 <header class="tavardt-header">
 <div class="tavardt-header-inner">
 <a class="tavardt-brand" href="https://ag.tavardt.com/" rel="noopener" target="_blank">
-<span class="tavardt-logo-text">TAVARDT<span class="tavardt-brand-dot">.</span></span>
+<span class="tavardt-logo-text">TAVARDT</span>
 </a>
 <nav class="tavardt-nav">
 <a class="tavardt-nav-link" href="https://ag.tavardt.com/" rel="noopener" target="_blank">Portal</a>
@@ -1727,44 +1716,7 @@ footer > div:first-child {
 </section>
 <section class="faq-section">
 <h2 class="faq-title">Frequently Asked Questions on MCP Security</h2>
-<div class="faq-list">
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
-<span>Why are local MCP servers an attractive target for attackers?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<p>Local MCP servers expose native shell execution and local file access. An indirect prompt injection can weaponize these tools against the user workstation.</p>
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
-<span>How does runtime schema validation prevent command injection?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<p>By enforcing strict regex patterns, numeric ranges, and disallowed character sets on all tool arguments before the underlying binary executes.</p>
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
-<span>What is Human-in-the-Loop verification in MCP architectures?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<p>A security checkpoint requiring affirmative human authorization before any destructive, financial, or data-sharing tool is allowed to execute.</p>
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
-<span>How does TAVARDT secure enterprise MCP deployments?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<p>We audit MCP tool schemas, configure least-privilege sandbox runtimes, implement mTLS proxy layers, and establish telemetry for all tool invocations.</p>
-</div>
-</div>
-</div>
+<div class="faq-list"><div class="faq-item"><div class="faq-question">What is the Model Context Protocol (MCP) and what are its risks?<span class="faq-toggle">+</span></div><div class="faq-answer">MCP is the open standard connecting AI models to local filesystems, tools, and databases. Key risks include overprivileged permissions and unconstrained command execution.</div></div><div class="faq-item"><div class="faq-question">How can an MCP server be compromised via indirect prompt injection?<span class="faq-toggle">+</span></div><div class="faq-answer">Untrusted data returned by a tool (e.g. web scraping) may contain hidden instructions commanding the LLM to call filesystem tools to exfiltrate files.</div></div><div class="faq-item"><div class="faq-question">Does the MCP Security Auditor execute invasive tests?<span class="faq-toggle">+</span></div><div class="faq-answer">No. It performs passive static analysis of your configuration manifests (mcp.json) without executing commands or mutating your environment.</div></div><div class="faq-item"><div class="faq-question">How do you enforce least privilege on MCP servers?<span class="faq-toggle">+</span></div><div class="faq-answer">By mounting strictly isolated directories in read-only mode, disabling generic shell tools, and requiring user confirmation on sensitive actions.</div></div><div class="faq-item"><div class="faq-question">What sandboxing patterns does TAVARDT recommend for MCP?<span class="faq-toggle">+</span></div><div class="faq-answer">We recommend containerized MCP daemons with ephemeral credentials, restricted outbound network routes, and dedicated process namespaces.</div></div></div>
 </section>
 <div class="cta-card">
 <h3>Require Enterprise Hardening for MCP Deployments?</h3>
@@ -1778,7 +1730,7 @@ footer > div:first-child {
 <footer class="tavardt-footer">
 <div class="tavardt-footer-inner">
 <div class="tavardt-footer-col">
-<div class="tavardt-footer-logo">TAVARDT<span class="tavardt-brand-dot">.</span></div>
+<div class="tavardt-footer-logo">TAVARDT</div>
 <p class="tavardt-footer-mission">We transform invisible businesses into recognized and secure brands in the digital market.</p>
 </div>
 <div class="tavardt-footer-col">
