@@ -2,14 +2,14 @@
 
 [![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-06b6d4?style=for-the-badge)](https://tavardt-usa.github.io/mcp-security-auditor-us/)
 [![Standard](https://img.shields.io/badge/Standard-Least%20Privilege-3b82f6?style=for-the-badge)](https://tavardt-usa.github.io/mcp-security-auditor-us/)
-[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Client--Side-10b981?style=for-the-badge)](https://tavardt-usa.github.io/mcp-security-auditor-us/)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Client-Side-10b981?style=for-the-badge)](https://tavardt-usa.github.io/mcp-security-auditor-us/)
 [![License](https://img.shields.io/badge/License-MIT-slate?style=for-the-badge)](LICENSE)
 
 Security auditor and permission validator for Model Context Protocol (MCP) servers and tools. Client-side web app and Python CLI.
 
 Engineered for organizations and engineering teams in **United States**, this repository provides a dedicated security suite to inspect, audit, and harden **Model Context Protocol (MCP)** server configurations, enforcing least privilege and sandboxing for autonomous AI agents.
 
----
+***
 
 ## Operational Interfaces
 
@@ -23,19 +23,19 @@ For automated security gating in CI/CD pipelines, pre-commit hooks, or local wor
 
 ```bash
 # Basic evaluation of an MCP configuration file
-python mcp_security_scanner.py --file mcp.json
+python mcp_security_scanner.py -file mcp.json
 
 # Strict mode for CI/CD gates (exits with code 1 upon any finding)
-python mcp_security_scanner.py --file mcp.json --strict
+python mcp_security_scanner.py -file mcp.json -strict
 
 # Automatically generate a hardened, sanitized configuration file
-python mcp_security_scanner.py --file mcp.json --harden mcp-hardened.json
+python mcp_security_scanner.py -file mcp.json -harden mcp-hardened.json
 
 # Output structured JSON report
-python mcp_security_scanner.py --file mcp.json --json
+python mcp_security_scanner.py -file mcp.json -json
 ```
 
----
+***
 
 ## Audited Security Vectors
 
@@ -45,7 +45,7 @@ python mcp_security_scanner.py --file mcp.json --json
 4. **Supply Chain & Tool Poisoning**: Enforces strict immutable package version pinning for dynamically resolved tools (`npx`, `uvx`).
 5. **SSRF & Private Network Access**: Identifies arguments targeting unauthorized internal network endpoints or loopback interfaces.
 
----
+***
 
 ## GitHub Actions CI/CD Integration
 
@@ -66,10 +66,10 @@ jobs:
           python-version: '3.11'
       - name: Run MCP Security Audit
         run: |
-          python mcp_security_scanner.py --file config/mcp.json --strict
+          python mcp_security_scanner.py -file config/mcp.json -strict
 ```
 
----
+***
 
 ## Compliance and Technical Standards
 
@@ -79,11 +79,11 @@ jobs:
 
 ## Official Portals
 
-- **Main National Portal**: [https://ag.tavardt.com/us/](https://ag.tavardt.com/us/)
+- **Main National Portal**: [Portal Institucional](https://ag.tavardt.com/us/)
 - **Tools Hub**: [https://tools.tavardt.com/](https://tools.tavardt.com/)
-- **Technical Support Channel**: [https://ag.tavardt.com/us/contact/](https://ag.tavardt.com/us/contact/)
+- **Technical Support Channel**: [Canal de Contato](https://ag.tavardt.com/us/contact/)
 
----
+***
 
 ### License
 Released under the MIT License. See [LICENSE](LICENSE) for full details.
