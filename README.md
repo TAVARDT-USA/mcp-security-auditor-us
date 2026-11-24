@@ -79,6 +79,15 @@ jobs:
 
 ***
 
+## Governance and Sovereignty
+
+* **Sovereign Unit**: [TAVARDT United States](https://ag.tavardt.com/us/) (`TAVARDT-USA`)
+* **Core Standards**: [00-core Governance](https://github.com/TAVARDT-USA/00-core)
+* **Diagnostic Portal**: [TAVARDT US Diagnostic Suite](https://tools.tavardt.com/us/)
+* **Enterprise Security**: [TAVARDT US Cybersecurity](https://ag.tavardt.com/us/cybersecurity/)
+
+***
+
 ### License
 Released under the MIT License. See [LICENSE](LICENSE) for full details.
 
