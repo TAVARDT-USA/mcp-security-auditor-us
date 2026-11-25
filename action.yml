@@ -1,0 +1,33 @@
+name: 'TAVARDT MCP Security Auditor'
+description: 'Automated security auditor and least-privilege configuration validator for Model Context Protocol (MCP) servers and AI agent tools.'
+author: 'TAVARDT'
+
+branding:
+  icon: 'shield'
+  color: 'purple'
+
+inputs:
+  config-file:
+    description: 'Path to the MCP configuration file (e.g., mcp.json or claude_desktop_config.json)'
+    required: false
+    default: 'mcp.json'
+  strict:
+    description: 'Fail the workflow if any security findings are discovered (true/false)'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run MCP Security Audit
+      shell: bash
+      run: |
+        CMD="python3"
+        if ! command -v python3 &> /dev/null; then
+          CMD="python"
+        fi
+        EXTRA_FLAGS=""
+        if [ "${{ inputs.strict }}" = "true" ]; then
+          EXTRA_FLAGS="-s"
+        fi
+        $CMD "${{ github.action_path }}/mcp_security_scanner.py" -f "${{ inputs.config-file }}" $EXTRA_FLAGS
