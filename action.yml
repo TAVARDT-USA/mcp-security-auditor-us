@@ -1,5 +1,5 @@
 name: 'TAVARDT MCP Security Auditor'
-description: 'Automated security auditor and least-privilege configuration validator for Model Context Protocol (MCP) servers and AI agent tools.'
+description: 'Security auditor and least-privilege configuration validator for Model Context Protocol (MCP) servers and tools.'
 author: 'TAVARDT'
 
 branding:
